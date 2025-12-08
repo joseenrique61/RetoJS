@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tasks">
+        <h1 class="tasks__title">My Tasks</h1>
+        <ul class="tasks__list">
+            <li class="tasks__item">
+                <input type="checkbox" id="task1" class="tasks__checkbox">
+                <label for="task1" class="tasks__label">Finish the report</label>
+            </li>
+            <li class="tasks__item">
+                <input type="checkbox" id="task2" class="tasks__checkbox">
+                <label for="task2" class="tasks__label">Go grocery shopping</label>
+            </li>
+            <li class="tasks__item">
+                <input type="checkbox" id="task3" class="tasks__checkbox">
+                <label for="task3" class="tasks__label">Call the doctor</label>
+            </li>
+            <li class="tasks__item">
+                <input type="checkbox" id="task4" class="tasks__checkbox">
+                <label for="task4" class="tasks__label">Walk the dog</label>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const checkboxes = Array.from(document.querySelectorAll(".tasks__checkbox"))
+        let lastClicked
+
+        function handleCheck(e) {
+            const isChecked = this.checked
+            if (e.shiftKey) {
+                const thisIndex = checkboxes.indexOf(e.target)
+                const lastIndex = checkboxes.indexOf(lastClicked)
+                checkboxes.slice(Math.min(thisIndex, lastIndex), Math.max(thisIndex, lastIndex)).forEach(element => {
+                    element.checked = isChecked
+                })
+            }
+
+            lastClicked = e.target
+        }
+
+        checkboxes.forEach(element => {
+            element.addEventListener('click', handleCheck)
+        });
+    </script>
+</body>
+</html>

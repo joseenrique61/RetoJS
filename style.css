@@ -1,0 +1,50 @@
+/* Block: tasks */
+.tasks {
+    font-family: sans-serif;
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Element: tasks__title */
+.tasks__title {
+    text-align: center;
+    margin-top: 0;
+}
+
+/* Element: tasks__list */
+.tasks__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Element: tasks__item */
+.tasks__item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.tasks__item:last-child {
+    border-bottom: none;
+}
+
+/* Element: tasks__checkbox */
+.tasks__checkbox {
+    margin-right: 10px;
+}
+
+/* Element: tasks__label */
+.tasks__label {
+    flex-grow: 1;
+}
+
+/* Modifier for a completed task */
+.tasks__checkbox:checked + .tasks__label {
+    text-decoration: line-through;
+    color: #888;
+}
