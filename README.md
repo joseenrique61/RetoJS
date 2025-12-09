@@ -15,13 +15,15 @@ Este es un reto que consiste en agregar tareas a una lista de tareas y poder mar
 
 ## Cómo Utilizarlo
 
-Dado que es un proyecto estático, no requiere instalación. Simplemente clona o descarga este repositorio y abre el archivo `src/index.html` en tu navegador web preferido.
+Dado que es un proyecto estático, no requiere instalación. Simplemente clona o descarga este repositorio y abre el archivo `docs/index.html` en tu navegador web preferido.
 
 ```bash
 git clone https://github.com/joseenrique61/RetoJS.git
 cd RetoJS
-# Abre src/index.html en el navegador
+# Abre docs/index.html en el navegador
 ```
+
+**Nota:** En este proyecto se usa el directorio `docs` para guardar el código fuente en vez de `src` (u otros más estándar) porque Github Pages solo reconoce ese directorio y la raíz para desplegar.
 
 ## Link al deploy del reto
 
