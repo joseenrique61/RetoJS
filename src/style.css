@@ -48,3 +48,38 @@
     text-decoration: line-through;
     color: #888;
 }
+
+/* Element: tasks__form */
+.tasks__form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* Element: tasks__input */
+.tasks__input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Element: tasks__button */
+.tasks__button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Element: tasks__delete-button */
+.tasks__delete-button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #f44336;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
